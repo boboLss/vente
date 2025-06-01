@@ -1,0 +1,7 @@
+FROM bitnami/spark:latest
+
+USER root
+
+# Crée un utilisateur nommé 'sparkuser' avec UID 1001
+RUN useradd -m -u 1001 sparkuser
+USER sparkuser
